@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+warehouse/out/
+reports/analysis_tables/
+reports/data_quality_report.json
