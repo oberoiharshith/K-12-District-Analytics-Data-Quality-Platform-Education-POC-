@@ -4,3 +4,4 @@ __pycache__/
 warehouse/out/
 reports/analysis_tables/
 reports/data_quality_report.json
+

@@ -22,3 +22,4 @@ FROM fct_assessment a
 JOIN dim_student st ON st.student_id = a.student_id
 WHERE a.school_year = 2025 AND a.term='spring'
 GROUP BY 1;
+

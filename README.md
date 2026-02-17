@@ -223,10 +223,7 @@ This project reflects how modern education organizations turn complex, multi-sou
 
 **trusted dashboards, accurate reporting, and clear decisions that improve student outcomes.**
 
-```
 
-<<<<<<< HEAD
-=======
 ## Outputs
 - `data/raw/` synthetic inputs (students, educators, schools, assessments)
 - `warehouse/out/` curated tables (fact/dim style)
@@ -244,4 +241,4 @@ This project reflects how modern education organizations turn complex, multi-sou
 - Replace synthetic inputs with real DDOE extracts by matching column names.
 - The same QA framework can be scheduled (daily/weekly) and versioned in git.
 
->>>>>>> 750922e (version1.2)
+```

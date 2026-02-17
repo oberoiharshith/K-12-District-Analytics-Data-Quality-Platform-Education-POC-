@@ -19,6 +19,7 @@ CREATE TABLE dim_student (
   iep_flag         BOOLEAN
 );
 
+
 CREATE TABLE dim_educator (
   educator_id      BIGINT PRIMARY KEY,
   role             TEXT, -- teacher/counselor/admin
