@@ -56,3 +56,4 @@ def ratio_vs_proficiency(
     corr = np.corrcoef(valid["students_per_teacher_fte"], valid["avg_proficiency"])[0,1] if len(valid) > 2 else np.nan
     df.attrs["corr_students_per_teacher_vs_proficiency"] = float(corr) if corr==corr else None
     return df
+
