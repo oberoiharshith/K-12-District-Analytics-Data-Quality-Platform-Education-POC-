@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "name": "students_unique_id",
+      "passed": true,
+      "detail": {
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "educators_unique_id",
+      "passed": true,
+      "detail": {
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "schools_unique_id",
+      "passed": true,
+      "detail": {
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "student_school_valid_school_id",
+      "passed": false,
+      "detail": {
+        "missing_school_refs": -42001
+      }
+    },
+    {
+      "name": "student_school_valid_student_id",
+      "passed": false,
+      "detail": {
+        "missing_student_refs": -42001
+      }
+    },
+    {
+      "name": "educator_total_fte_leq_1_05",
+      "passed": true,
+      "detail": {
+        "violations": 0,
+        "max_fte": 1.0
+      }
+    },
+    {
+      "name": "teacher_certification_none_rate_leq_0_02",
+      "passed": false,
+      "detail": {
+        "teacher_count": 4341,
+        "none_cert_count": 182,
+        "none_cert_rate": 0.041925823542962454
+      }
+    },
+    {
+      "name": "assessment_coverage_two_subjects_spring",
+      "passed": true,
+      "detail": {
+        "students_missing_subject": 0
+      }
+    },
+    {
+      "name": "students_per_teacher_fte_leq_35",
+      "passed": true,
+      "detail": {
+        "extreme_schools": 0,
+        "max_ratio": 23.555931248238938
+      }
+    }
+  ],
+  "summary": {
+    "total_checks": 9,
+    "passed_checks": 6,
+    "failed_checks": 3
+  }
+}
+

@@ -1,7 +1,13 @@
+# Virtual env
 .venv/
+
+# Python
 __pycache__/
 *.pyc
+
+# Generated warehouse outputs
 warehouse/out/
+
+# Regeneratable analysis tables
 reports/analysis_tables/
-reports/data_quality_report.json
 

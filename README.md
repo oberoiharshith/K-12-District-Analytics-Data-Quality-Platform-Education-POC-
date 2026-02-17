@@ -1,4 +1,3 @@
-```markdown
 # K-12 District Analytics & Data Quality Platform (POC)
 
 This project is an end-to-end, district-style education analytics proof of concept that simulates how school systems transform raw Student Information System (SIS), assessment, and staffing data into **trusted dashboards and actionable insights for educators and administrators**.
@@ -240,5 +239,3 @@ This project reflects how modern education organizations turn complex, multi-sou
 ## Notes
 - Replace synthetic inputs with real DDOE extracts by matching column names.
 - The same QA framework can be scheduled (daily/weekly) and versioned in git.
-
-```
