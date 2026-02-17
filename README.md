@@ -1,6 +1,6 @@
 # K-12 District Analytics & Data Quality Platform (POC)
 
-This project is an end-to-end, district-style education analytics proof of concept that simulates how school systems transform raw Student Information System (SIS), assessment, and staffing data into **trusted dashboards and actionable insights for educators and administrators**.
+This project is an end-to-end, district-style education analytics proof of concept that simulates how school systems transform raw Student Information System (SIS), assessment, and staffing data into **dashboard-ready data models and actionable insights for educators and administrators**.
 
 It demonstrates how to:
 
@@ -24,10 +24,10 @@ School and district leaders rely on accurate, accessible data to answer question
 
 This project simulates a modern analytics workflow that delivers those answers through:
 
-- Curated data models
-- Automated data quality validation
-- Reusable metric logic
-- Stakeholder-ready reporting outputs
+- Curated data models  
+- Automated data quality validation  
+- Reusable metric logic  
+- Stakeholder-ready reporting outputs  
 
 ---
 
@@ -51,7 +51,7 @@ Core entities include:
 - Assessments  
 - Staffing / FTE  
 
-These are transformed into **analysis-ready fact and dimension tables** for consistent reporting.
+These are transformed into **analysis-ready fact and dimension tables** for consistent and reliable reporting.
 
 ---
 
@@ -66,13 +66,7 @@ This project includes automated QA checks for:
 - Student enrollment inconsistencies  
 - Staffing ratio validation  
 
-Outputs:
-
-```
-
-reports/data_quality_report.json
-
-```
+Output: `reports/data_quality_report.json`
 
 These checks are designed to be **scheduled and version-controlled**, mirroring production district workflows.
 
@@ -96,22 +90,20 @@ All metrics are built from reusable, governed logic to ensure consistency across
 
 The pipeline automatically produces:
 
-- Analysis tables for dashboards and ad-hoc queries  
-- A short policy / leadership brief with:
+- Analysis tables for downstream dashboards and ad-hoc queries  
+- A short leadership-ready policy brief with:
   - Key findings  
   - Methodology  
   - Data limitations  
   - Recommendations  
 
-```
+Outputs:
 
-warehouse/out/
-reports/analysis_tables/
-reports/policy_brief.pdf
+- `warehouse/out/` → curated fact/dimension tables  
+- `reports/analysis_tables/` → KPI-ready outputs  
+- `reports/policy_brief.pdf` → leadership-facing summary  
 
-```
-
-This mirrors how district leaders consume data to support planning and instructional decisions.
+This mirrors how district leaders and data teams consume analytics for planning and instructional decisions.
 
 ---
 
@@ -120,14 +112,15 @@ This mirrors how district leaders consume data to support planning and instructi
 ```
 
 data/raw/                  # Synthetic K-12 source data
-warehouse/out/             # Curated fact/dimension tables
+warehouse/out/             # Curated fact/dimension tables (generated)
 reports/
 data_quality_report.json # QA validation results
-analysis_tables/         # KPI-ready outputs
+analysis_tables/         # KPI-ready outputs (generated)
 policy_brief.pdf         # Leadership-facing summary
-sql/                       # Example schema and analytical queries
+sql/                       # Schema and analytical SQL examples
 scripts/
 run_pipeline.py          # End-to-end workflow
+src/                       # Data generation, QA checks, analysis logic
 
 ````
 
@@ -220,22 +213,5 @@ The QA framework, curated model, and reporting outputs will remain unchanged.
 
 This project reflects how modern education organizations turn complex, multi-source data into:
 
-**trusted dashboards, accurate reporting, and clear decisions that improve student outcomes.**
+**trusted data models, accurate reporting, and clear decisions that improve student outcomes.**
 
-
-## Outputs
-- `data/raw/` synthetic inputs (students, educators, schools, assessments)
-- `warehouse/out/` curated tables (fact/dim style)
-- `reports/data_quality_report.json` QA results + flags
-- `reports/policy_brief.pdf` 2-page brief with key findings from the synthetic run
-- `reports/analysis_tables/` CSVs used in the brief
-
-## What this demonstrates (mapped to the JD)
-- **Database programming**: SQL schema + query examples (`sql/`)
-- **Reporting accuracy**: educator QA checks (duplicates, missing certs, FTE totals, staffing ratios)
-- **Program evaluation**: pre/post and subgroup comparisons with clear metrics
-- **Policy writing**: short brief format used by agencies (methods + limitations + recommendations)
-
-## Notes
-- Replace synthetic inputs with real DDOE extracts by matching column names.
-- The same QA framework can be scheduled (daily/weekly) and versioned in git.
